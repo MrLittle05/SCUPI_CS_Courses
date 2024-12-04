@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BinSortTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-09T02:12:03" hostname="LAPTOP-2TOGKFEP" time="0.032">
+  <properties/>
+  <testcase name="testBinSort()" classname="BinSortTest" time="0.032"/>
+  <system-out><![CDATA[Adding 2 to root.
+Adding 4 to right sub-tree of 2
+Adding 1 to left sub-tree of 2
+Adding 5 to right sub-tree of 2
+Adding 5 to right sub-tree of 4
+Adding 3 to right sub-tree of 2
+Adding 3 to left sub-tree of 4
+----- In Order -----
+Inorder traversal: "1" "2" "3" "4" "5" 
+----- Pre Order -----
+Preorder traversal: "2" "1" "4" "3" "5" 
+----- Post Order -----
+Postorder traversal: "1" "3" "5" "4" "2" 
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

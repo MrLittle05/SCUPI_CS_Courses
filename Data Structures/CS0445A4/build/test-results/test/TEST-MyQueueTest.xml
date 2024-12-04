@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MyQueueTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2024-05-05T09:53:20" hostname="LAPTOP-2TOGKFEP" time="0.01">
+  <properties/>
+  <testcase name="testIsEmptyAfterEnqueueAndDequeue()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testModifyHeadAfterEnqueue2()" classname="MyQueueTest" time="0.003"/>
+  <testcase name="testModifyHeadDefault()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testToStringAfterEnqueue2AndDequeue()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testIsEmptyDefault()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testDequeueAfterEnqueue1()" classname="MyQueueTest" time="0.001"/>
+  <testcase name="testDequeueAfterEnqueue2()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testEnqueueByToString()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testToStringAfterEnqueueAndDequeue()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testToStringDefault()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testIsEmptyAfterEnqueue()" classname="MyQueueTest" time="0.001"/>
+  <testcase name="testEnqueue2ByToString()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testDequeueDefault()" classname="MyQueueTest" time="0.0"/>
+  <testcase name="testModifyHeadAfterEnqueue()" classname="MyQueueTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

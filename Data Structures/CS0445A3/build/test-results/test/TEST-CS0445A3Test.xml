@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CS0445A3Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-09T11:39:04" hostname="LAPTOP-2TOGKFEP" time="0.043">
+  <properties/>
+  <testcase name="getMainOutputExercise2()" classname="CS0445A3Test" time="0.034"/>
+  <testcase name="getMainOutputExercise3()" classname="CS0445A3Test" time="0.006"/>
+  <system-out><![CDATA[[]
+[A. N. Other]
+
+[]
+[A. N. Other]
+[A. N. Other, J. Doe]
+[J. Doe]
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

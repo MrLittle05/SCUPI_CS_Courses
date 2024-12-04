@@ -1,0 +1,276 @@
+	Digit 7
+	Digit 8
+Op /
+	Digit 5
+Op -
+	Value =
+
+	Digit 9
+	Digit 8
+Op -
+	Digit 3
+Op *
+	Value =
+
+	Digit 9
+	Digit 8
+Op /
+	Digit 6
+Op /
+	Value =
+
+	Digit 0
+
+Digit -6
+Op *
+	Digit 1
+Op +
+
+Digit -2
+Op -
+
+Digit -1
+Op -
+
+Digit -2
+Op *
+	Digit 0
+Op +
+	Digit 5
+Op +
+
+Digit -1
+Op +
+
+Digit -4
+Op +
+	Digit 8
+Op +
+	Digit 6
+Op +
+
+Digit -6
+Op *
+
+Digit -8
+Op +
+	Digit 5
+Op +
+	Digit 0
+Op +
+
+Digit -7
+Op +
+	Digit 6
+Op -
+
+Digit -4
+Op +
+	Digit 9
+Op -
+	Digit 4
+Op *
+	Value =
+
+
+Digit -2
+
+Digit -9
+Op /
+
+
+Digit -4
+	Digit 8
+Op /
+
+	Digit 3
+
+Digit -4
+Op /
+
+		Digit 7
+		Digit 3
+	Op /
+	
+
+	Digit 4
+
+	Digit 7
+
+Op +
+
+	Digit 3
+
+Op +
+
+	Value =
+
+
+	Digit 2
+	Digit 0
+Op /
+
+	Digit 2
+	Digit 3
+Op +
+	Digit 2
+Op -
+	Value =
+
+	Digit 1
+	Digit 4
+Op *
+	Digit 4
+Op *
+	Value =
+
+	Digit 9
+	Digit 3
+Op +
+	Digit 3
+Op *
+	Value =
+
+	Digit 8
+	Digit 8
+Op -
+	Digit 6
+Op /
+	Value =
+
+
+Digit -4
+
+Digit -5
+Op -
+
+
+Digit -1
+	Digit 7
+Op -
+
+	Digit 4
+
+Digit -5
+Op -
+
+	Digit 2
+	Digit 4
+Op -
+
+	Digit 8
+	Digit 2
+Op *
+	Digit 5
+Op /
+	Value =
+
+	Digit 5
+	Digit 0
+Op +
+	Digit 4
+Op /
+	Value =
+
+
+Digit -8
+
+Digit -4
+Op *
+
+
+Digit -1
+	Digit 6
+Op *
+
+
+Digit -7
+
+Digit -2
+Op +
+
+
+Digit -7
+	Digit 2
+Op +
+
+	Digit 7
+
+Digit -1
+Op *
+
+	Digit 4
+	Digit 1
+Op *
+
+	Digit 5
+
+Digit -4
+Op +
+
+	Digit 8
+	Digit 9
+Op +
+
+	Digit 9
+	Digit 6
+Op -
+	Digit 2
+Op -
+	Value =
+
+	Digit 0
+
+ 	Digit 1
+ 
+!	Digit 2
+!
+"	Digit 3
+"
+#	Digit 4
+#
+$	Digit 5
+$
+%	Digit 6
+%
+&	Digit 7
+&
+'	Digit 8
+'
+(	Digit 9
+(
+)	Digit 2
+)	Digit 5
+)Op *
+)	Digit 1
+)Op +
+)	Value =
+)
+*	Digit 8
+*	Digit 9
+*Op /
+*	Digit 1
+*Op +
+*	Value =
+*
++	Digit 5
++	Digit 8
++Op *
++	Digit 7
++Op -
++	Value =
++
+,	Digit 5
+,	Digit 1
+,Op -
+,	Digit 6
+,Op +
+,	Value =
+,
+-	Digit 5
+-	Digit 2
+-Op /
+-	Digit 8
+-Op *
+-	Value =
+-

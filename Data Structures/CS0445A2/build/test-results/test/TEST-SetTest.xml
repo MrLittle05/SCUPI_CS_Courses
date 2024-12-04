@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SetTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2024-04-02T13:24:26" hostname="LAPTOP-2TOGKFEP" time="0.02">
+  <properties/>
+  <testcase name="testClearNotEmpty()" classname="SetTest" time="0.002"/>
+  <testcase name="testClearEmpty()" classname="SetTest" time="0.0"/>
+  <testcase name="testToStringPos()" classname="SetTest" time="0.001"/>
+  <testcase name="testToStringEmpty()" classname="SetTest" time="0.001"/>
+  <testcase name="testToStringNoDup()" classname="SetTest" time="0.0"/>
+  <testcase name="testContainsNeg()" classname="SetTest" time="0.0"/>
+  <testcase name="testContainsPos()" classname="SetTest" time="0.0"/>
+  <testcase name="testIsEmptyNeg()" classname="SetTest" time="0.0"/>
+  <testcase name="testIsEmptyPos()" classname="SetTest" time="0.0"/>
+  <testcase name="testSizeNotEmpty()" classname="SetTest" time="0.0"/>
+  <testcase name="testSizeEmpty()" classname="SetTest" time="0.001"/>
+  <testcase name="testAddNeg()" classname="SetTest" time="0.0"/>
+  <testcase name="testAddPos()" classname="SetTest" time="0.001"/>
+  <testcase name="testRemoveNeg()" classname="SetTest" time="0.001"/>
+  <testcase name="testRemovePos()" classname="SetTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

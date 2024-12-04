@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MyLinkedListElementTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-04-09T11:39:04" hostname="LAPTOP-2TOGKFEP" time="0.014">
+  <properties/>
+  <testcase name="testGetValueAfterSet()" classname="MyLinkedListElementTest" time="0.001"/>
+  <testcase name="testToString()" classname="MyLinkedListElementTest" time="0.001"/>
+  <testcase name="testGetValueDefault()" classname="MyLinkedListElementTest" time="0.001"/>
+  <testcase name="testGetNextDefault()" classname="MyLinkedListElementTest" time="0.001"/>
+  <testcase name="testGetNextAfterSet()" classname="MyLinkedListElementTest" time="0.002"/>
+  <testcase name="testSetNext()" classname="MyLinkedListElementTest" time="0.001"/>
+  <testcase name="testSetValue()" classname="MyLinkedListElementTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

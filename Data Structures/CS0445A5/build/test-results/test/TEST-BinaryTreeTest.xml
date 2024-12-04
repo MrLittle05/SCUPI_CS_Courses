@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BinaryTreeTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2024-05-09T02:12:03" hostname="LAPTOP-2TOGKFEP" time="0.048">
+  <properties/>
+  <testcase name="testTraversalPreOrderRight()" classname="BinaryTreeTest" time="0.003"/>
+  <testcase name="testAddLeft()" classname="BinaryTreeTest" time="0.002"/>
+  <testcase name="testAddLots()" classname="BinaryTreeTest" time="0.002"/>
+  <testcase name="testAddRoot()" classname="BinaryTreeTest" time="0.001"/>
+  <testcase name="testTraversalPreOrderLeft()" classname="BinaryTreeTest" time="0.001"/>
+  <testcase name="testTraversalPreOrderLots()" classname="BinaryTreeTest" time="0.002"/>
+  <testcase name="testTraversalPreOrderRoot()" classname="BinaryTreeTest" time="0.001"/>
+  <testcase name="testTraversalInOrderLeft()" classname="BinaryTreeTest" time="0.001"/>
+  <testcase name="testTraversalInOrderLots()" classname="BinaryTreeTest" time="0.003"/>
+  <testcase name="testTraversalInOrderRoot()" classname="BinaryTreeTest" time="0.002"/>
+  <testcase name="testAddRight()" classname="BinaryTreeTest" time="0.002"/>
+  <testcase name="testTraversalPostOrderRight()" classname="BinaryTreeTest" time="0.001"/>
+  <testcase name="testTraversalInOrderRight()" classname="BinaryTreeTest" time="0.001"/>
+  <testcase name="testTraversalPostOrderLeft()" classname="BinaryTreeTest" time="0.001"/>
+  <testcase name="testTraversalPostOrderLots()" classname="BinaryTreeTest" time="0.004"/>
+  <testcase name="testTraversalPostOrderRoot()" classname="BinaryTreeTest" time="0.003"/>
+  <system-out><![CDATA[Adding hotel to root.
+Adding tango to right sub-tree of hotel
+Preorder traversal: "hotel" "tango" 
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+Adding tango to right sub-tree of hotel
+Adding delta to left sub-tree of hotel
+Adding delta to left sub-tree of foxtrot
+Adding golf to left sub-tree of hotel
+Adding golf to right sub-tree of foxtrot
+Adding lema to right sub-tree of hotel
+Adding lema to left sub-tree of tango
+Adding xray to right sub-tree of hotel
+Adding xray to right sub-tree of tango
+
+Adding hotel to root.
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+Preorder traversal: "hotel" "foxtrot" 
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+Adding tango to right sub-tree of hotel
+Adding delta to left sub-tree of hotel
+Adding delta to left sub-tree of foxtrot
+Adding golf to left sub-tree of hotel
+Adding golf to right sub-tree of foxtrot
+Adding lema to right sub-tree of hotel
+Adding lema to left sub-tree of tango
+Adding xray to right sub-tree of hotel
+Adding xray to right sub-tree of tango
+Preorder traversal: "hotel" "foxtrot" "delta" "golf" "tango" "lema" "xray" 
+
+Adding hotel to root.
+Preorder traversal: "hotel" 
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+Inorder traversal: "foxtrot" "hotel" 
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+Adding tango to right sub-tree of hotel
+Adding delta to left sub-tree of hotel
+Adding delta to left sub-tree of foxtrot
+Adding golf to left sub-tree of hotel
+Adding golf to right sub-tree of foxtrot
+Adding lema to right sub-tree of hotel
+Adding lema to left sub-tree of tango
+Adding xray to right sub-tree of hotel
+Adding xray to right sub-tree of tango
+Inorder traversal: "delta" "foxtrot" "golf" "hotel" "lema" "tango" "xray" 
+
+Adding hotel to root.
+Inorder traversal: "hotel" 
+
+Adding hotel to root.
+Adding tango to right sub-tree of hotel
+
+Adding hotel to root.
+Adding tango to right sub-tree of hotel
+Postorder traversal: "tango" "hotel" 
+
+Adding hotel to root.
+Adding tango to right sub-tree of hotel
+Inorder traversal: "hotel" "tango" 
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+Postorder traversal: "foxtrot" "hotel" 
+
+Adding hotel to root.
+Adding foxtrot to left sub-tree of hotel
+Adding tango to right sub-tree of hotel
+Adding delta to left sub-tree of hotel
+Adding delta to left sub-tree of foxtrot
+Adding golf to left sub-tree of hotel
+Adding golf to right sub-tree of foxtrot
+Adding lema to right sub-tree of hotel
+Adding lema to left sub-tree of tango
+Adding xray to right sub-tree of hotel
+Adding xray to right sub-tree of tango
+Postorder traversal: "delta" "golf" "foxtrot" "lema" "xray" "tango" "hotel" 
+
+Adding hotel to root.
+Postorder traversal: "hotel" 
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

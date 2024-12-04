@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BinaryTreeNodeTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-05-09T02:12:03" hostname="LAPTOP-2TOGKFEP" time="0.007">
+  <properties/>
+  <testcase name="testGetValue()" classname="BinaryTreeNodeTest" time="0.0"/>
+  <testcase name="testGetLeftDefault()" classname="BinaryTreeNodeTest" time="0.002"/>
+  <testcase name="testSetLeftViaGet()" classname="BinaryTreeNodeTest" time="0.001"/>
+  <testcase name="testSetRightViaGet()" classname="BinaryTreeNodeTest" time="0.001"/>
+  <testcase name="testGetRightDefault()" classname="BinaryTreeNodeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

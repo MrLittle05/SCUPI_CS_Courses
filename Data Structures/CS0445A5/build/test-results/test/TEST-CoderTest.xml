@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CoderTest" tests="29" skipped="0" failures="0" errors="0" timestamp="2024-05-09T02:12:03" hostname="LAPTOP-2TOGKFEP" time="0.032">
+  <properties/>
+  <testcase name="testEncodeTab()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeA()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeB()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeC()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeD()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeE()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeF()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeG()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeH()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeI()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeJ()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeK()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeL()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeM()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeN()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeO()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeP()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeQ()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeR()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeS()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeT()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeU()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeV()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeW()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeX()" classname="CoderTest" time="0.0"/>
+  <testcase name="testEncodeY()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeZ()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeUnknown()" classname="CoderTest" time="0.001"/>
+  <testcase name="testEncodeSpace()" classname="CoderTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

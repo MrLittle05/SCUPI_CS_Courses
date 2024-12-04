@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CalculatorTest" tests="44" skipped="0" failures="0" errors="0" timestamp="2024-05-05T09:53:20" hostname="LAPTOP-2TOGKFEP" time="0.074">
+  <properties/>
+  <testcase name="testDivideMinus()" classname="CalculatorTest" time="0.014"/>
+  <testcase name="testMinusMultiply()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDivideDivide()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testRandomOperations()" classname="CalculatorTest" time="0.003"/>
+  <testcase name="testDivideNegNeg()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDivideNegPos()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDividePosNeg()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDividePosPos()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testPlusPlus()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDivideBy0()" classname="CalculatorTest" time="0.002"/>
+  <testcase name="testPlusMinus()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyMultiply()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testPlusMultiply()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMinusDivide()" classname="CalculatorTest" time="0.002"/>
+  <testcase name="testMinusNegNeg()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMinusNegPos()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testMinusPosNeg()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testMinusPosPos()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyDivide()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testPlusDivide()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testMultiplyNegNeg()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyNegPos()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testPlusNegNeg()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testPlusNegPos()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyPosNeg()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyPosPos()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testPlusPosNeg()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testPlusPosPos()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMinusMinus()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDigit0()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testDigit1()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDigit2()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDigit3()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDigit4()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testDigit5()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDigit6()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testDigit7()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testDigit8()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDigit9()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testMultiplyPlus()" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testDividePlus()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyMinus()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testMinusPlus()" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testDivideMultiply()" classname="CalculatorTest" time="0.001"/>
+  <system-out><![CDATA[Digit 7
+Digit 8
+Op /
+Digit 5
+Op -
+Value =
+
+Digit 9
+Digit 8
+Op -
+Digit 3
+Op *
+Value =
+
+Digit 9
+Digit 8
+Op /
+Digit 6
+Op /
+Value =
+
+Digit 0
+Digit -6
+Op *
+Digit 1
+Op +
+Digit -2
+Op -
+Digit -1
+Op -
+Digit -2
+Op *
+Digit 0
+Op +
+Digit 5
+Op +
+Digit -1
+Op +
+Digit -4
+Op +
+Digit 8
+Op +
+Digit 6
+Op +
+Digit -6
+Op *
+Digit -8
+Op +
+Digit 5
+Op +
+Digit 0
+Op +
+Digit -7
+Op +
+Digit 6
+Op -
+Digit -4
+Op +
+Digit 9
+Op -
+Digit 4
+Op *
+Value =
+
+Digit -2
+Digit -9
+Op /
+
+Digit -4
+Digit 8
+Op /
+
+Digit 3
+Digit -4
+Op /
+
+Digit 7
+Digit 3
+Op /
+
+Digit 4
+Digit 7
+Op +
+Digit 3
+Op +
+Value =
+
+Digit 2
+Digit 0
+Op /
+
+Digit 2
+Digit 3
+Op +
+Digit 2
+Op -
+Value =
+
+Digit 1
+Digit 4
+Op *
+Digit 4
+Op *
+Value =
+
+Digit 9
+Digit 3
+Op +
+Digit 3
+Op *
+Value =
+
+Digit 8
+Digit 8
+Op -
+Digit 6
+Op /
+Value =
+
+Digit -4
+Digit -5
+Op -
+
+Digit -1
+Digit 7
+Op -
+
+Digit 4
+Digit -5
+Op -
+
+Digit 2
+Digit 4
+Op -
+
+Digit 8
+Digit 2
+Op *
+Digit 5
+Op /
+Value =
+
+Digit 5
+Digit 0
+Op +
+Digit 4
+Op /
+Value =
+
+Digit -8
+Digit -4
+Op *
+
+Digit -1
+Digit 6
+Op *
+
+Digit -7
+Digit -2
+Op +
+
+Digit -7
+Digit 2
+Op +
+
+Digit 7
+Digit -1
+Op *
+
+Digit 4
+Digit 1
+Op *
+
+Digit 5
+Digit -4
+Op +
+
+Digit 8
+Digit 9
+Op +
+
+Digit 9
+Digit 6
+Op -
+Digit 2
+Op -
+Value =
+
+Digit 0
+
+Digit 1
+
+Digit 2
+
+Digit 3
+
+Digit 4
+
+Digit 5
+
+Digit 6
+
+Digit 7
+
+Digit 8
+
+Digit 9
+
+Digit 2
+Digit 5
+Op *
+Digit 1
+Op +
+Value =
+
+Digit 8
+Digit 9
+Op /
+Digit 1
+Op +
+Value =
+
+Digit 5
+Digit 8
+Op *
+Digit 7
+Op -
+Value =
+
+Digit 5
+Digit 1
+Op -
+Digit 6
+Op +
+Value =
+
+Digit 5
+Digit 2
+Op /
+Digit 8
+Op *
+Value =
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

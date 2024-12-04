@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MyArrayListTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2024-04-02T13:24:26" hostname="LAPTOP-2TOGKFEP" time="0.033">
+  <properties/>
+  <testcase name="testContainsNegNonEmpty()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testClearNotEmpty()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testClearEmpty()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testToStringPos()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testIndexOfNonexist()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testRemoveEmpty()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testContainsNegEmpty()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testToStringEmpty()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testContainsPos()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testIsEmptyNeg()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testIsEmptyPos()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testIndexOfNeg()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testIndexOfPos()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testSizeNotEmpty()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testSetOutOfBounds()" classname="MyArrayListTest" time="0.008"/>
+  <testcase name="testSizeEmpty()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testAddPos()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testGetNeg()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testGetPos()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testSetNeg()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testSetPos()" classname="MyArrayListTest" time="0.001"/>
+  <testcase name="testRemoveNeg()" classname="MyArrayListTest" time="0.0"/>
+  <testcase name="testRemovePos()" classname="MyArrayListTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

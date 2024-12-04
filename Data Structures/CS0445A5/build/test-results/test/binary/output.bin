@@ -1,0 +1,190 @@
+Adding 2 to root.
+!Adding 4 to right sub-tree of 2
+ Adding 1 to left sub-tree of 2
+!Adding 5 to right sub-tree of 2
+!Adding 5 to right sub-tree of 4
+!Adding 3 to right sub-tree of 2
+ Adding 3 to left sub-tree of 4
+----- In Order -----
+)Inorder traversal: "1" "2" "3" "4" "5" 
+----- Pre Order -----
+*Preorder traversal: "2" "1" "4" "3" "5" 
+----- Post Order -----
++Postorder traversal: "1" "3" "5" "4" "2" 
+
+Adding hotel to root.
+)Adding tango to right sub-tree of hotel
+&Preorder traversal: "hotel" "tango" 
+
+Adding hotel to root.
+*Adding foxtrot to left sub-tree of hotel
+
+Adding hotel to root.
+*Adding foxtrot to left sub-tree of hotel
+)Adding tango to right sub-tree of hotel
+(Adding delta to left sub-tree of hotel
+*Adding delta to left sub-tree of foxtrot
+'Adding golf to left sub-tree of hotel
+*Adding golf to right sub-tree of foxtrot
+(Adding lema to right sub-tree of hotel
+'Adding lema to left sub-tree of tango
+(Adding xray to right sub-tree of hotel
+(Adding xray to right sub-tree of tango
+
+Adding hotel to root.
+
+Adding hotel to root.
+*Adding foxtrot to left sub-tree of hotel
+(Preorder traversal: "hotel" "foxtrot" 
+
+	Adding hotel to root.
+	*Adding foxtrot to left sub-tree of hotel
+	)Adding tango to right sub-tree of hotel
+	(Adding delta to left sub-tree of hotel
+	*Adding delta to left sub-tree of foxtrot
+	'Adding golf to left sub-tree of hotel
+	*Adding golf to right sub-tree of foxtrot
+	(Adding lema to right sub-tree of hotel
+	'Adding lema to left sub-tree of tango
+	(Adding xray to right sub-tree of hotel
+	(Adding xray to right sub-tree of tango
+	MPreorder traversal: "hotel" "foxtrot" "delta" "golf" "tango" "lema" "xray" 
+	
+
+Adding hotel to root.
+
+Preorder traversal: "hotel" 
+
+
+Adding hotel to root.
+*Adding foxtrot to left sub-tree of hotel
+'Inorder traversal: "foxtrot" "hotel" 
+
+Adding hotel to root.
+*Adding foxtrot to left sub-tree of hotel
+)Adding tango to right sub-tree of hotel
+(Adding delta to left sub-tree of hotel
+*Adding delta to left sub-tree of foxtrot
+'Adding golf to left sub-tree of hotel
+*Adding golf to right sub-tree of foxtrot
+(Adding lema to right sub-tree of hotel
+'Adding lema to left sub-tree of tango
+(Adding xray to right sub-tree of hotel
+(Adding xray to right sub-tree of tango
+LInorder traversal: "delta" "foxtrot" "golf" "hotel" "lema" "tango" "xray" 
+
+Adding hotel to root.
+Inorder traversal: "hotel" 
+
+Adding hotel to root.
+)Adding tango to right sub-tree of hotel
+
+Adding hotel to root.
+)Adding tango to right sub-tree of hotel
+'Postorder traversal: "tango" "hotel" 
+
+Adding hotel to root.
+)Adding tango to right sub-tree of hotel
+%Inorder traversal: "hotel" "tango" 
+
+Adding hotel to root.
+*Adding foxtrot to left sub-tree of hotel
+)Postorder traversal: "foxtrot" "hotel" 
+
+Adding hotel to root.
+*Adding foxtrot to left sub-tree of hotel
+)Adding tango to right sub-tree of hotel
+(Adding delta to left sub-tree of hotel
+*Adding delta to left sub-tree of foxtrot
+'Adding golf to left sub-tree of hotel
+*Adding golf to right sub-tree of foxtrot
+(Adding lema to right sub-tree of hotel
+'Adding lema to left sub-tree of tango
+(Adding xray to right sub-tree of hotel
+(Adding xray to right sub-tree of tango
+NPostorder traversal: "delta" "golf" "foxtrot" "lema" "xray" "tango" "hotel" 
+
+Adding hotel to root.
+Postorder traversal: "hotel" 
+
+9<"Input: -...	Expected: b	 Found: ?
+9<"Input: -.-.	Expected: c	 Found: ?
+9<!Input: -..	Expected: d	 Found: d
+9<"Input: ..-.	Expected: f	 Found: ?
+9<!Input: --.	Expected: g	 Found: g
+9<"Input: ....	Expected: h	 Found: ?
+9<"Input: .---	Expected: j	 Found: ?
+9<!Input: -.-	Expected: k	 Found: k
+9<"Input: .-..	Expected: l	 Found: ?
+9<!Input: ---	Expected: o	 Found: o
+9<"Input: .--.	Expected: p	 Found: ?
+9<"Input: --.-	Expected: q	 Found: ?
+9<!Input: .-.	Expected: r	 Found: r
+9<!Input: ...	Expected: s	 Found: s
+9<!Input: ..-	Expected: u	 Found: u
+9<"Input: ...-	Expected: v	 Found: ?
+9<!Input: .--	Expected: w	 Found: w
+9<"Input: -..-	Expected: x	 Found: ?
+9<"Input: -.--	Expected: y	 Found: ?
+9<"Input: --..	Expected: z	 Found: ?
+9<
+9<Count correct: 8
+9A"Input: -...	Expected: b	 Found: ?
+9A"Input: -.-.	Expected: c	 Found: ?
+9A!Input: -..	Expected: d	 Found: d
+9A"Input: ..-.	Expected: f	 Found: ?
+9A!Input: --.	Expected: g	 Found: g
+9A"Input: ....	Expected: h	 Found: ?
+9A"Input: .---	Expected: j	 Found: ?
+9A!Input: -.-	Expected: k	 Found: k
+9A"Input: .-..	Expected: l	 Found: ?
+9A!Input: ---	Expected: o	 Found: o
+9A"Input: .--.	Expected: p	 Found: ?
+9A"Input: --.-	Expected: q	 Found: ?
+9A!Input: .-.	Expected: r	 Found: r
+9A!Input: ...	Expected: s	 Found: s
+9A!Input: ..-	Expected: u	 Found: u
+9A"Input: ...-	Expected: v	 Found: ?
+9A!Input: .--	Expected: w	 Found: w
+9A"Input: -..-	Expected: x	 Found: ?
+9A"Input: -.--	Expected: y	 Found: ?
+9A"Input: --..	Expected: z	 Found: ?
+9A
+9ACount correct: 8
+HGetamin
+HG
+HIt
+HI
+HJe
+HJ
+HKm
+HK
+HLn
+HL
+HM#Input: -...	Expected: b	 Found: ?
+HM#Input: -.-.	Expected: c	 Found: ?
+HM"Input: -..	Expected: d	 Found: d
+HM#Input: ..-.	Expected: f	 Found: ?
+HM"Input: --.	Expected: g	 Found: g
+HM#Input: ....	Expected: h	 Found: ?
+HM#Input: .---	Expected: j	 Found: ?
+HM"Input: -.-	Expected: k	 Found: k
+HM#Input: .-..	Expected: l	 Found: ?
+HM"Input: ---	Expected: o	 Found: o
+HM#Input: .--.	Expected: p	 Found: ?
+HM#Input: --.-	Expected: q	 Found: ?
+HM"Input: .-.	Expected: r	 Found: r
+HM"Input: ...	Expected: s	 Found: s
+HM"Input: ..-	Expected: u	 Found: u
+HM#Input: ...-	Expected: v	 Found: ?
+HM"Input: .--	Expected: w	 Found: w
+HM#Input: -..-	Expected: x	 Found: ?
+HM#Input: -.--	Expected: y	 Found: ?
+HM#Input: --..	Expected: z	 Found: ?
+HM
+HMCount correct: 8
+HM
+HNa
+HN
+HOi
+HO

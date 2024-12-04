@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CounterTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2024-04-02T13:24:26" hostname="LAPTOP-2TOGKFEP" time="0.066">
+  <properties/>
+  <testcase name="testContainsNegNonEmpty()" classname="CounterTest" time="0.029"/>
+  <testcase name="testGetCount()" classname="CounterTest" time="0.002"/>
+  <testcase name="testClearNotEmpty()" classname="CounterTest" time="0.001"/>
+  <testcase name="testClearEmpty()" classname="CounterTest" time="0.002"/>
+  <testcase name="testRemoveEmpty()" classname="CounterTest" time="0.001"/>
+  <testcase name="testContainsNegEmpty()" classname="CounterTest" time="0.0"/>
+  <testcase name="testContainsPos()" classname="CounterTest" time="0.002"/>
+  <testcase name="testIsEmptyNeg()" classname="CounterTest" time="0.001"/>
+  <testcase name="testIsEmptyPos()" classname="CounterTest" time="0.001"/>
+  <testcase name="testAddDouble()" classname="CounterTest" time="0.001"/>
+  <testcase name="testAddSingle()" classname="CounterTest" time="0.001"/>
+  <testcase name="testSizeDouble()" classname="CounterTest" time="0.001"/>
+  <testcase name="testSizeCombo()" classname="CounterTest" time="0.0"/>
+  <testcase name="testSizeEmpty()" classname="CounterTest" time="0.0"/>
+  <testcase name="testSizeMulti()" classname="CounterTest" time="0.001"/>
+  <testcase name="testSizeSingle()" classname="CounterTest" time="0.001"/>
+  <testcase name="testRemoveNeg()" classname="CounterTest" time="0.001"/>
+  <testcase name="testRemovePos()" classname="CounterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

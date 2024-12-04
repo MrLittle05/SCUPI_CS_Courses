@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DecoderTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2024-05-09T02:12:03" hostname="LAPTOP-2TOGKFEP" time="0.034">
+  <properties/>
+  <testcase name="testDecode2DashDot()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecode2Dot()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecodeDash()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecodeExercise2()" classname="DecoderTest" time="0.011"/>
+  <testcase name="testDecode2DotDash()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecode2DashDash()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecodeDotDot()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecodeDashDot()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecode2Exercise2()" classname="DecoderTest" time="0.005"/>
+  <testcase name="testDecode2DotDot()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecodeDotDash()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecodeDashDash()" classname="DecoderTest" time="0.001"/>
+  <testcase name="testDecode2Dash()" classname="DecoderTest" time="0.0"/>
+  <testcase name="testDecodeDot()" classname="DecoderTest" time="0.001"/>
+  <system-out><![CDATA[Input: -...	Expected: b	 Found: ?
+Input: -.-.	Expected: c	 Found: ?
+Input: -..	Expected: d	 Found: d
+Input: ..-.	Expected: f	 Found: ?
+Input: --.	Expected: g	 Found: g
+Input: ....	Expected: h	 Found: ?
+Input: .---	Expected: j	 Found: ?
+Input: -.-	Expected: k	 Found: k
+Input: .-..	Expected: l	 Found: ?
+Input: ---	Expected: o	 Found: o
+Input: .--.	Expected: p	 Found: ?
+Input: --.-	Expected: q	 Found: ?
+Input: .-.	Expected: r	 Found: r
+Input: ...	Expected: s	 Found: s
+Input: ..-	Expected: u	 Found: u
+Input: ...-	Expected: v	 Found: ?
+Input: .--	Expected: w	 Found: w
+Input: -..-	Expected: x	 Found: ?
+Input: -.--	Expected: y	 Found: ?
+Input: --..	Expected: z	 Found: ?
+
+Count correct: 8
+Input: -...	Expected: b	 Found: ?
+Input: -.-.	Expected: c	 Found: ?
+Input: -..	Expected: d	 Found: d
+Input: ..-.	Expected: f	 Found: ?
+Input: --.	Expected: g	 Found: g
+Input: ....	Expected: h	 Found: ?
+Input: .---	Expected: j	 Found: ?
+Input: -.-	Expected: k	 Found: k
+Input: .-..	Expected: l	 Found: ?
+Input: ---	Expected: o	 Found: o
+Input: .--.	Expected: p	 Found: ?
+Input: --.-	Expected: q	 Found: ?
+Input: .-.	Expected: r	 Found: r
+Input: ...	Expected: s	 Found: s
+Input: ..-	Expected: u	 Found: u
+Input: ...-	Expected: v	 Found: ?
+Input: .--	Expected: w	 Found: w
+Input: -..-	Expected: x	 Found: ?
+Input: -.--	Expected: y	 Found: ?
+Input: --..	Expected: z	 Found: ?
+
+Count correct: 8
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
