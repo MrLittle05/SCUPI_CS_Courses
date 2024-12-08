@@ -1,13 +1,16 @@
+# Name: Dame Chen
+# Student ID: 2023141520228
+
 .data
 grid: .byte 32:42 
 borderL: .asciiz "|" 
 borderR: .asciiz "|" 
 underscore: .asciiz "_"
 columnIndices: .asciiz " 0 1 2 3 4 5 6  \n"
-bottom: .asciiz "___________________________________\n" 
+bottom: .asciiz "\n___________________________________\n" 
 newline: .asciiz "\n"
-p1_prompt:	.asciiz "Player 1, it's your turn.\nSelect a column to play. Must be between 0 and 6\n"
-p2_prompt: .asciiz "Player 2, it's your turn.\nSelect a column to play. Must be between 0 and 6\n"
+p1_prompt:	.asciiz "Player 1, it's your turn.\nSelect a column to play. Must be between 0 and 6:\n"
+p2_prompt: .asciiz "Player 2, it's your turn.\nSelect a column to play. Must be between 0 and 6:\n"
 p1:	.asciiz "*"
 p2:	.asciiz "+"
 space:	.asciiz " "
@@ -65,14 +68,14 @@ addp1:
 	j p2_turn
 
 p2_turn:
-    la $a0, p2_prompt
-    li $v0, 4
-    syscall 
-    li $v0, 5
-    syscall 
-    move $s0, $v0
-    addi $s0, $s0, 35 
-    lb $t0, space
+     la $a0, p2_prompt
+     li $v0, 4
+     syscall 
+     li $v0, 5
+     syscall 
+     move $s0, $v0
+     addi $s0, $s0, 35 
+     lb $t0, space
 
 p2_loop:
      lb $t1, grid($s0)
@@ -324,14 +327,14 @@ CheckLoop:
      j CheckLoop
       
 CheckLoopVertD: 
-    beq $t0, 4, p1WinExit
-    slt $t4, $s1, $t5
-    beq $t4, $zero, noVwin
-    lb $t3, grid($s1)
-    bne $t3, $t2, noVwin
-    addi $t0, $t0, 1
-    add $s1, $s1, $t6
-    j CheckLoopVertD
+     beq $t0, 4, p1WinExit
+     slt $t4, $s1, $t5
+     beq $t4, $zero, noVwin
+     lb $t3, grid($s1)
+     bne $t3, $t2, noVwin
+     addi $t0, $t0, 1
+     add $s1, $s1, $t6
+     j CheckLoopVertD
     
 CheckLoopVertU:
      beq $t0, 4, p1WinExit
