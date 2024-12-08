@@ -1,390 +1,330 @@
 .data
-#grid: .space 42
-grid: .byte 32:42 # creates an array of 42 chars and sets each one as a blank space since 32 is the decimal value for spacebar
-#grid: .byte 32, 32, 32, 32, 32 ,32 ,32 ,32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32
-borderL: .asciiz "|" # used for the border on the left side
-borderR: .asciiz "|" # used for the border on the right side and all the spaces in the middle
+grid: .byte 32:42 
+borderL: .asciiz "|" 
+borderR: .asciiz "|" 
 underscore: .asciiz "_"
 columnIndices: .asciiz " 0 1 2 3 4 5 6  \n"
-bottom: .asciiz "______________________" # the bottom line of the board, I have yet to find out if its the right length yet
-newline: .asciiz "\n" # makes a new line
-prompt:	.asciiz "Player 1, it's your turn.\nSelect a column to play. Must be between 0 and 6\n"
+bottom: .asciiz "___________________________________\n" 
+newline: .asciiz "\n"
+p1_prompt:	.asciiz "Player 1, it's your turn.\nSelect a column to play. Must be between 0 and 6\n"
+p2_prompt: .asciiz "Player 2, it's your turn.\nSelect a column to play. Must be between 0 and 6\n"
 p1:	.asciiz "*"
 p2:	.asciiz "+"
 space:	.asciiz " "
 fullC:	.asciiz "The column you are trying to add to is full. Please enter a different number between 0 and 6: "
-oOfR:	.asciiz "That play is invalid. Try again\nSelect a column to play. Must be between 0 and 6\n "
-comp:	.asciiz "After the computer's turn, the board looks like this:\n"
+oOfR:	.asciiz "That play is invalid. Try again\nSelect a column to play. Must be between 0 and 6:\n "
 start:	.asciiz "The board has been reset. A new game will be started."
 p1Win: .asciiz "Congratulations player 1. You won!\n"
-CompWin: .asciiz "\n Computer wins. You lose!\n"
+p2Win: .asciiz "Congratulations player 2. You won!\n"
 newGame: .asciiz "Enter 1 if you would like to play again and 0 if you would like to quit: "
 
-.text
 
-main: #manages the game
-      jal DisplayBoard
-      la $a0, newline
-      li $v0, 4
-      syscall
- 
-	la $a0, prompt
+.text
+main: 
+     jal DisplayBoard
+     la $a0, newline
+     li $v0, 4
+     syscall
+	la $a0, p1_prompt
 	li $v0, 4
-	syscall #prompt user for column number
+	syscall 
 	li $v0, 5
-	syscall #retrieve column number
+	syscall 
 	
-	#move the column number
-Loop:	addi $s0, $v0, 1
-	
-	#check that the number's actually between 1 and 7
+Loop:
+     addi $s0, $v0, 1
 	li $t0, 0
 	li $t1, 8
 	slt $t2, $s0, $t1
-	#branch if it ain't
 	beq $t2, $zero, outOfRange
 	slt $t2, $t0, $s0
 	beq $t2, $zero, outOfRange
-	
 	addi $s0, $s0, -1
-	addi $s0, $s0, 35 #start checking at bottom row
+	addi $s0, $s0, 35 
 	lb $t0, space
-loop:	lb $t1, grid($s0)
-	beq $t0, $t1, addp1 #check if soemthing's there (add a piece if something isn't)
-	addi $s0, $s0, -7 #move up a row
+
+loop:	
+     lb $t1, grid($s0)
+	beq $t0, $t1, addp1 
+	addi $s0, $s0, -7 
 	li $t2, -1
-	#breaks the loop by branching if the column is full
 	slt $t2, $t2, $s0
 	beq $t2, $zero, colFull
 	j loop
-	
-	#generates random column number
-cTurn:	li $a1, 7
-	li $v0, 42
-	syscall
-	
-	#move the column number
-	add $s0, $a0, $zero
-	addi $s0, $s0, 35
-	lb $t0, space
-cLoop:	lb $t1, grid($s0)
-	beq $t0, $t1, addp2
-	addi $s0, $s0, -7
-	li $t2, 0
-	#breaks the loop by branching if the column is full
-	slt $t2, $t2, $s0
-	beq $t2, $zero, cTurn
-	j cLoop
-	
-	#add a piece for player 1 (X's)
-addp1:	lb $t0, p1
+		
+addp1:
+     lb $t0, p1
 	sb $t0, grid($s0)
-	
-	jal DisplayBoard #display updated board
-	
-	#add $s1, $s0, $zero
+	jal DisplayBoard 
 	lb $t0, p1
-	jal WinCheck #checks if they won
-	
+	jal WinCheck 
 	add $s1, $s0, $zero
-	
 	la $a0, newline
 	li $v0, 4
 	syscall
+	j p2_turn
+
+p2_turn:
+    la $a0, p2_prompt
+    li $v0, 4
+    syscall 
+    li $v0, 5
+    syscall 
+    move $s0, $v0
+    addi $s0, $s0, 35 
+    lb $t0, space
+
+p2_loop:
+     lb $t1, grid($s0)
+     beq $t0, $t1, addp2 
+     addi $s0, $s0, -7 
+     li $t2, -1
+     slt $t2, $t2, $s0
+     beq $t2, $zero, colFull
+     j p2_loop
 	
-	#play the computer's turn
-	j cTurn
-	
-	#add a piece for player 2 (O's)
-addp2:	lb $t0, p2
-	sb $t0, grid($s0)
-	
-	#display updated board and tell the user what on earth is going on
-	la $a0, comp
-	li $v0, 4
-	syscall
-	
-	jal DisplayBoard
-	
+addp2:
+     lb $t0, p2
+	sb $t0, grid($s0)	
 	lb $t0, p2
-	jal WinCheck
-	
-	la $a0, newline
-	li $v0, 4
-	syscall
-	
+	jal WinCheck	
 	j main
 	
-	#tells the user they're stupid and they need to try again
 colFull:
 	la $a0, fullC
 	li $v0, 4
-	syscall #prompt user again
+	syscall 
 	li $v0, 5
-	syscall #get the new entry
-	j Loop #jump back to recheck and hopefully continue
+	syscall 
+	j Loop 
 
-	#also tells the user they're stupid
 outOfRange:
 	la $a0, oOfR
 	li $v0, 4
-	syscall #prompt user again
+	syscall 
 	li $v0, 5
-	syscall #get the new entry
-	j Loop #jump back to recheck and hopefully continue
+	syscall 
+	j Loop 
 
-	#resets the game board
 resetBoard:
 	lb $s0, space
 	add $t0, $zero, $zero
-rLoop:	beq $t0, 42, rExit
+
+rLoop:
+     beq $t0, 42, rExit
 	sb $s0, grid($t0)
 	addi $t0, $t0, 1
 	j rLoop
 
-	#give the user a message that the board was cleared and the game is restarting
-rExit:	la $a0, start
+rExit:	
+     la $a0, start
 	li $v0, 4
 	syscall
 	la $a0, newline
 	li $v0, 4
 	syscall
-	
-	j main #jump back to beginning
+	j main
 
 DisplayBoard:
-   subu $sp, $sp, 4 # adds enough room on the stack for the return address
-   sw $ra, ($sp)
+     subu $sp, $sp, 4 
+     sw $ra, ($sp)
+     la $a0, columnIndices  
+     li $v0, 4             
+     syscall               
+     add $t0, $zero, $zero 
    
-   # Print column indices above the board
-   la $a0, columnIndices  # Load the address of the column indices string
-   li $v0, 4             # Syscall code for printing a string
-   syscall               # Print the column indices string
+while:
+     beq $t0, 42, exit 
+     la $a0, borderL 
+     li $v0, 4
+     syscall
+     add $t1, $zero, $zero
 
-   add $t0, $zero, $zero # makes sure $t0 is set to 0
-   
-   while: beq $t0, 42, exit # loops until every item in the array has been displayed, loops a total of 6 times, one for each row
+row: beq $t1, 7, rowComplete 
+     lb $a0, grid($t0)
+     li $t2, 32
+     beq $a0, $t2, printUnderscore
+     li $v0, 11
+     syscall
+     j afterPrint
 
-            # displays the left border 
-            la $a0, borderL 
-            li $v0, 4
-            syscall
+printUnderscore:
+     li $a0, '_'
+     li $v0, 11
+     syscall
             
-            # makes sure $t1 is set to zero on each iteration
-            add $t1, $zero, $zero
-            
-       row: beq $t1, 7, rowComplete # displays a row of the board with 7 columns, loops until that row's 7 columns have been displayed
-       
-            # loads the byte into $a0 to be displayed; characters are only one byte
-            lb $a0, grid($t0)
-            
-            # check if the current position is empty (space character)
-            li $t2, 32
-            beq $a0, $t2, printUnderscore
-            
-            # if not empty, display the actual character
-            li $v0, 11 # syscall value for displaying a character
-            syscall
-            j afterPrint
-
-       printUnderscore:
-            # if empty, display an underscore
-            li $a0, '_'
-            li $v0, 11
-            syscall
-            
-       afterPrint:
-            # displays a right border mark 
-            la $a0, borderR
-            li $v0, 4
-            syscall
-            
-            # increments the values of $t0 and $t1 by one
-            addi $t0, $t0, 1
-            addi $t1, $t1, 1
-            
-            j row # jumps back to row   
+afterPrint:
+     la $a0, borderR
+     li $v0, 4
+     syscall
+     addi $t0, $t0, 1
+     addi $t1, $t1, 1
+     j row    
                 
-       rowComplete: # is called once the row is displayed
-            # makes a new line for the next row
-            la $a0, newline
-            li $v0, 4
-            syscall
-            j while
-
-
+rowComplete: 
+     la $a0, newline
+     li $v0, 4
+     syscall
+     j while
 
 exit:
+     la $a0, bottom 
+     li $v0, 4
+     syscall
+     lw $ra, ($sp)
+     addu $sp, $sp, 4
+     jr $ra
 
-#displays the bottom of the board
-la $a0, bottom 
-li $v0, 4
-syscall
-
-   lw $ra, ($sp)
-   addu $sp, $sp, 4
-   jr $ra
-   
-#------------------------#win checks for both players
-  
 WinCheck:
-    subu $sp, $sp, 4
-    sw $ra, ($sp)
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
     
-    add $t2, $zero, $t0 #load current piece into t2
-    add $t0, $zero, $zero
-    #lb $t2, p1
-    add $s1, $s0, $zero
-    jal HorizontalRight
-    addi $t0, $t0, -1
-    add $s1, $s0, $zero
-    jal HorizontalLeft
+     add $t2, $zero, $t0 
+     add $t0, $zero, $zero
+
+     add $s1, $s0, $zero
+     jal HorizontalRight
+     addi $t0, $t0, -1
+     add $s1, $s0, $zero
+     jal HorizontalLeft
     
-    add $s1, $s0, $zero
-    add $t0, $zero, $zero
+     add $s1, $s0, $zero
+     add $t0, $zero, $zero
     
-    add $s1, $s0, $zero
-    jal VerticalDown
+     add $s1, $s0, $zero
+     jal VerticalDown
     
-    add $t0, $zero, $zero
-    add $s1, $s0, $zero
-    jal DiagDownTop
+     add $t0, $zero, $zero
+     add $s1, $s0, $zero
+     jal DiagDownTop
     
-    addi $t0, $t0, -1
-    add $s1, $s0, $zero
-    jal DiagDownBot
+     addi $t0, $t0, -1
+     add $s1, $s0, $zero
+     jal DiagDownBot
     
-    add $t0, $zero, $zero
-    add $s1, $s0, $zero
-    jal DiagUpTop
+     add $t0, $zero, $zero
+     add $s1, $s0, $zero
+     jal DiagUpTop
     
-    addi $t0, $t0, -1
-    add $s1, $s0, $zero
-    jal DiagUpBot
+     addi $t0, $t0, -1
+     add $s1, $s0, $zero
+     jal DiagUpBot
     
-    lw $ra, ($sp)
-    addu $sp, $sp, 4
-    jr $ra
+     lw $ra, ($sp)
+     addu $sp, $sp, 4
+     jr $ra
     
 HorizontalRight:
-subu $sp, $sp, 4
-sw $ra, ($sp)
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
 
-addi $t6, $zero, 1 #CHECKING HORIZONTALLY FROM THE LEFT (next piece)
+     addi $t6, $zero, 1
+     addi $t5, $zero, 7
+     slt $t4, $s1, $t5
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 7
-slt $t4, $s1, $t5
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 14
+     slt $t4, $s1, $t5
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 14
-slt $t4, $s1, $t5
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 21
+     slt $t4, $s1, $t5
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 21
-slt $t4, $s1, $t5
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 28
+     slt $t4, $s1, $t5
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 28
-slt $t4, $s1, $t5
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 35
+     slt $t4, $s1, $t5
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 35
-slt $t4, $s1, $t5
-beq $t4, 1, CheckLoop
-
-addi $t5, $zero, 42
-slt $t4, $s1, $t5
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 42
+     slt $t4, $s1, $t5
+     beq $t4, 1, CheckLoop
 
 HorizontalLeft:
-subu $sp, $sp, 4
-sw $ra, ($sp)
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
 
-addi $t6, $zero, -1 #CHECKING HORIZONTALLY FROM THE LEFT (next piece)
+     addi $t6, $zero, -1
 
-addi $t5, $zero, 7
-slt $t4, $s1, $t5
-subi $t5, $zero, 8
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 7
+     slt $t4, $s1, $t5
+     subi $t5, $zero, 8
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 14
-slt $t4, $s1, $t5
-subi $t5, $zero, 8
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 14 
+     slt $t4, $s1, $t5
+     subi $t5, $zero, 8
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 21
-slt $t4, $s1, $t5
-subi $t5, $zero, 8
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 21
+     slt $t4, $s1, $t5
+     subi $t5, $zero, 8
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 28
-slt $t4, $s1, $t5
-subi $t5, $zero, 8
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 28
+     slt $t4, $s1, $t5
+     subi $t5, $zero, 8
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 35
-slt $t4, $s1, $t5
-subi $t5, $zero, 8
-beq $t4, 1, CheckLoop
+     addi $t5, $zero, 35
+     slt $t4, $s1, $t5
+     subi $t5, $zero, 8
+     beq $t4, 1, CheckLoop
 
-addi $t5, $zero, 42
-slt $t4, $s1, $t5
-subi $t5, $zero, 8
-beq $t4, 1, CheckLoop
-
-
+     addi $t5, $zero, 42
+     slt $t4, $s1, $t5
+     subi $t5, $zero, 8
+     beq $t4, 1, CheckLoop
 
 VerticalDown:        
-subu $sp, $sp, 4
-sw $ra, ($sp)
-
-li $t5, 42
-addi $t6, $zero, 7
-j CheckLoopVertD
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
+     li $t5, 42
+     addi $t6, $zero, 7
+     j CheckLoopVertD
 
 DiagDownTop:        
-subu $sp, $sp, 4
-sw $ra, ($sp)
-
-li $t5, 42
-addi $t6, $zero, 8
-j CheckLoopVertD
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
+     li $t5, 42
+     addi $t6, $zero, 8
+     j CheckLoopVertD
 
 DiagDownBot:        
-subu $sp, $sp, 4
-sw $ra, ($sp)
-
-li $t5, 0
-addi $t6, $zero, -8
-j CheckLoopVertU
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
+     li $t5, 0
+     addi $t6, $zero, -8
+     j CheckLoopVertU
 
 DiagUpTop:        
-subu $sp, $sp, 4
-sw $ra, ($sp)
-
-li $t5, 42
-addi $t6, $zero, 6
-j CheckLoopVertD
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
+     li $t5, 42
+     addi $t6, $zero, 6
+     j CheckLoopVertD
 
 DiagUpBot:        
-subu $sp, $sp, 4
-sw $ra, ($sp)
+     subu $sp, $sp, 4
+     sw $ra, ($sp)
+     li $t5, 0
+     addi $t6, $zero, -6
+     j CheckLoopVertU
 
-li $t5, 0
-addi $t6, $zero, -6
-j CheckLoopVertU
-
-    #Important ######### the check for out of bounds needs to happen at the bigginging of the loop before the lb.######### important
-    CheckLoop: beq $t0,4,WinExit
-    beq, $s1, $t5, noHLwin
-    lb $t3, grid($s1)
-    bne $t3, $t2, noHLwin # if the space is player 2's peice then p1 didn't win
-    addi $t0, $t0, 1
-    add $s1, $s1, $t6
-    j CheckLoop
-     
-    
-    CheckLoopVertD: beq $t0, 4, WinExit
+CheckLoop: 
+     beq $t0,4, p1WinExit
+     beq, $s1, $t5, noHLwin
+     lb $t3, grid($s1)
+     bne $t3, $t2, noHLwin 
+     addi $t0, $t0, 1
+     add $s1, $s1, $t6
+     j CheckLoop
+      
+CheckLoopVertD: 
+    beq $t0, 4, p1WinExit
     slt $t4, $s1, $t5
     beq $t4, $zero, noVwin
     lb $t3, grid($s1)
@@ -393,61 +333,50 @@ j CheckLoopVertU
     add $s1, $s1, $t6
     j CheckLoopVertD
     
-    CheckLoopVertU: beq $t0, 4, WinExit
-    slt $t4, $t5, $s1
-    beq $t4, $zero, noVwin
-    lb $t3, grid($s1)
-    bne $t3, $t2, noVwin
-    addi $t0, $t0, 1
-    add $s1, $s1, $t6
-    j CheckLoopVertU
+CheckLoopVertU:
+     beq $t0, 4, p1WinExit
+     slt $t4, $t5, $s1
+     beq $t4, $zero, noVwin
+     lb $t3, grid($s1)
+     bne $t3, $t2, noVwin
+     addi $t0, $t0, 1
+     add $s1, $s1, $t6
+     j CheckLoopVertU
     
-    noHLwin:
-        lw $ra, ($sp)
-        addu $sp, $sp, 4 
-        jr $ra
+noHLwin:
+     lw $ra, ($sp)
+     addu $sp, $sp, 4 
+     jr $ra
         
-        noVwin:
-        lw $ra, ($sp)
-        addu $sp, $sp, 4 
-        jr $ra
+noVwin:
+     lw $ra, ($sp)
+     addu $sp, $sp, 4 
+     jr $ra
           
-     WinExit:
-     	lb $t7, p2
-     	beq $t7, $t2, CWinExit
-        la $a0, p1Win
-        li $v0, 4
-        syscall
-        
-        #prompt the user to start a new game
-        la $a0, newGame
-        li $v0, 4
-        syscall
-        li $v0, 5
-        syscall
-        
-        #reset the board if the input isn't 0
-        bne $v0, $zero, resetBoard
-        
-        #terminate the game
-        li $v0, 10
-        syscall
+p1WinExit:
+     lb $t7, p2
+     beq $t7, $t2, p2WinExit
+     la $a0, p1Win
+     li $v0, 4
+     syscall   
+     la $a0, newGame
+     li $v0, 4
+     syscall
+     li $v0, 5
+     syscall   
+     bne $v0, $zero, resetBoard
+     li $v0, 10
+     syscall
  
-     CWinExit:
-        la $a0, CompWin
-        li $v0, 4
-        syscall
-        
-        #prompt the user to start a new game
-        la $a0, newGame
-        li $v0, 4
-        syscall
-        li $v0, 5
-        syscall
-        
-        #reset the board if the input isn't zero
-        bne $v0, $zero, resetBoard
-        
-        #terminate the game
-        li $v0, 10
-        syscall
+p2WinExit:
+     la $a0, p2Win
+     li $v0, 4
+     syscall  
+     la $a0, newGame
+     li $v0, 4
+     syscall
+     li $v0, 5
+     syscall 
+     bne $v0, $zero, resetBoard   
+     li $v0, 10
+     syscall
