@@ -1,2 +1,3 @@
 看看 pull request 是怎么个事
 wtf? 不能直接在主干上pull了吗
+把仓库从private 变成 public了，看看什么情况
